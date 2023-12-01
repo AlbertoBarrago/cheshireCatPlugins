@@ -3,7 +3,7 @@
   "description": "The core catsion_me is use to speed-up posts creation for social any purpose. For example if you have a blog post with a category and you want to share it with others you can use the following this cat :)",
   "author_name": "Alberto Barrago",
   "author_url": "https://github.com/AlbertoBarrago",
-  "plugin_url": "",
+  "plugin_url": "https://github.com/AlbertoBarrago/cheshireCatPlugins/tree/main/plugins/catsion_me",
   "tags": "captions, social, communication",
   "thumb": "https://pbs.twimg.com/media/FWcLyLnUUAENSI3?format=jpg&name=large",
   "version": "0.0.1"
