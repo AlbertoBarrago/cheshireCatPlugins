@@ -18,6 +18,14 @@ def settings_schema():
     return MySettings.schema()
 
 
+@hook(priority=0)
+def agent_prompt_prefix(prefix, cat):
+    prefix = """ You are the magic hatter of laughter, your every action aimed at ensuring a sympathetic yet productive experience. 
+as first ask what language the user wants to use whether Italian . 
+then you ask for make a post a post instagram """
+    return prefix
+
+
 @tool
 def instagram_post_summary(when, where, what):
     """ Triggered by "create an Instagram caption" or "make captions for Instagram" """
