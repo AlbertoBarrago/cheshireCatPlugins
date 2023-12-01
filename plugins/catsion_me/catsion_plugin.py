@@ -5,12 +5,7 @@ import random
 
 
 class MySettings(BaseModel):
-    required_int: int
-    optional_int: int = 69
-    required_str: str
-    optional_str: str = "meeeoww"
-    required_date: date
-    optional_date: date = 1679616000
+    humor: str = "Funny"
 
 
 @plugin
@@ -38,4 +33,7 @@ def instagram_post_summary(when, where, what):
                f"🎤 {random.choice(greetings)} {when} for {random.choice(activities)}."
                f"The entry is free, so there's no reason to miss out! 🎉 To reserve your spot,"
                f"follow the link in our bio. We look forward to seeing you there! 🙌 #LiveMusic")
-    return summary
+
+    result_by_humor = MySettings.humor + summary
+
+    return result_by_humor
