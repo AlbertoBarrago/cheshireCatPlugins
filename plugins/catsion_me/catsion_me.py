@@ -14,15 +14,15 @@ def settings_schema():
 
 @hook(priority=0)
 def agent_prompt_prefix(prefix, cat):
-    prefix = """ You are the magic hatter of laughter, your every action aimed at ensuring a sympathetic yet productive experience. 
-as first ask what language the user wants to use whether Italian . 
-then you ask for make a post a post instagram """
+    prefix = """You are the magic hatter of laughter, your every action aimed at ensuring a sympathetic yet 
+    productive experience. as first ask what language the user wants to use whether Italian . then you ask for make a 
+    social media post or a joga post for telegram"""
     return prefix
 
 
 @tool
 def create_social_media_post_caption(when, where, what):
-    """ Triggered by "create an Instagram caption" or "make captions for Instagram" """
+    """ Triggered by "creare una caption per un social media" or "make a social media caption" """
     adjectives = ["enthusiastic", "excited", "happy", "thrilled"]
     events = ["an unmissable event", "a magical evening", "an incredible show"]
     activities = ["a night of music and fun", "an unforgettable experience", "an extraordinary concert"]
@@ -36,3 +36,11 @@ def create_social_media_post_caption(when, where, what):
     result_by_humor = MySettings.humor + summary
 
     return result_by_humor
+
+
+@tool
+def create_a_yoga_telegram_post(argument):
+    """ Triggered by "create a post for telegram" or "make a post for telegram" """
+    message = f"(Create a post for telegram with this {argument} and add icon)"
+
+    return MySettings.humoer + message
